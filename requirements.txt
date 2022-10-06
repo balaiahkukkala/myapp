@@ -75,4 +75,3 @@ watchdog==2.1.9
 Werkzeug==2.2.2
 wrapt==1.14.1
 xgboost==0.90
-zipp==3.8.1
