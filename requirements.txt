@@ -120,3 +120,4 @@ widgetsnbextension==3.6.1
 wrapt==1.12.1
 xgboost==0.90
 zipp==3.6.0
+python==3.9.6
