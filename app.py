@@ -34,19 +34,19 @@ def model_prediction(X):
     st.write('You have selected:', choice)
     if(choice == 'RandomForest'):
         model = st.file_uploader("CHOOSE RandomForest CLASSIFIER JOBLIB FILE")
-        threshold = pickle.load(open(".\Main_Data\\rf_threshold.pkl","rb"))
+        threshold = pickle.load(open("./Main_Data/rf_threshold.pkl","rb"))
     elif(choice =='GradientBoost'):
         model = st.file_uploader("CHOOSE GradientBoosting CLASSIFIER JOBLIB FILE")
-        threshold = pickle.load(open(".\Main_Data\\gb_threshold.pkl","rb"))
+        threshold = pickle.load(open("./Main_Data/gb_threshold.pkl","rb"))
     elif(choice == "AdaBoost"):
         model = st.file_uploader("CHOOSE AdaBoost CLASSIFIER JOBLIB FILE")
-        threshold = pickle.load(open(".\Main_Data\\ab_threshold.pkl","rb"))
+        threshold = pickle.load(open("./Main_Data/ab_threshold.pkl","rb"))
     elif(choice =="LogisticRegression"):
         model = st.file_uploader("CHOOSE LogisticRegression CLASSIFIER JOBLIB FILE")
-        threshold = pickle.load(open(".\Main_Data\\log_threshold.pkl","rb"))
+        threshold = pickle.load(open("./Main_Data/log_threshold.pkl","rb"))
     else:
         model = st.file_uploader("CHOOSE XGBoost CLASSIFIER JOBLIB FILE")
-        threshold = pickle.load(open(".\Main_Data\\xg_threshold.pkl","rb"))
+        threshold = pickle.load(open("./Main_Data/xg_threshold.pkl","rb"))
    
     st.write("Threshold value:",threshold)
     if model is not None and X is not None:
@@ -82,7 +82,7 @@ def load_data():
     
 
 def load_mean_std_data():
-    df_mean_std = pd.read_csv(".\Main_Data\df_mean_std.csv")
+    df_mean_std = pd.read_csv("./Main_Data/df_mean_std.csv")
     if st.checkbox("Show Mean and standard deviation of each features..."):
         st.write(df_mean_std)
     
@@ -100,7 +100,7 @@ def standardization(data, mean_std):
     
 
 def load_best_features():
-    best_feats = pickle.load(open(".\Main_Data\\best_features.pkl","rb"))
+    best_feats = pickle.load(open("./Main_Data/best_features.pkl","rb"))
     if st.checkbox("Show Best features..."):
         st.write(best_feats)
     
