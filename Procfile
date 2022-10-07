@@ -1,1 +1,1 @@
-web: streamlit run app.py --activate.email "kukkalabalaiah@gmail.com" --server.headless true --server.enableXsrfProtection false --server.enableCORS false --server.port $PORT --server.enableWebsocketCompression false
+web: streamlit run app.py --server.headless true --server.enableXsrfProtection false --server.enableCORS false --server.port $PORT --server.enableWebsocketCompression false
